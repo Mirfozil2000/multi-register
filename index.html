@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Multi Step Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form">
+        <div class="step" id="personal-information">
+          <div class="step-title">Register</div>
+          <div class="field-group">
+            <label class="field-label" for="name">Name</label>
+            <input
+              class="input-field"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="enter your name"
+            />
+            <div class="field-error" id="name-error"></div>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="email">Email</label>
+            <input
+              class="input-field"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@gmail.com"
+            />
+            <div class="field-error" id="email-error"></div>
+          </div>
+        </div>
+        <div class="step" id="topics">
+          <div class="sumary-title">Which topics you are interested in?</div>
+          <div class="checkbox-group">
+            <div class="checkbox-field">
+              <input
+                type="checkbox"
+                value="Software Development"
+                name="interests"
+                id="software_development"
+                hidden
+              />
+              <label for="software_development">Software Development</label>
+            </div>
+            <div class="checkbox-field">
+              <input
+                type="checkbox"
+                value="User Experience"
+                name="interests"
+                id="user_experience"
+                hidden
+              />
+              <label for="user_experience">User Experience</label>
+            </div>
+            <div class="checkbox-field">
+              <input
+                type="checkbox"
+                value="Graphic Design"
+                name="interests"
+                id="graphic_design"
+                hidden
+              />
+              <label for="graphic_design">Graphic Design</label>
+            </div>
+            <div class="field-error" id="interests-error"></div>
+          </div>
+        </div>
+        <div id="resume" class="step">
+          <div class="sumary-title">Summary</div>
+          <div>
+            <span class="resume-label">Name: </span
+            ><span id="resume-name" class="resume-value">Emily</span>
+          </div>
+          <div>
+            <span class="resume-label">Email: </span
+            ><span id="resume-email" class="resume-value">emily@test.com</span>
+          </div>
+          <div class="resume-list">
+            <div class="resume-label">Topics:</div>
+            <ul id="interests-list"></ul>
+          </div>
+        </div>
+      </form>
+      <div class="button-group">
+        <button class="submit-button" id="submit">Continue</button>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="steps-wording">Step <span id="step">1</span> of 3</div>
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </body>
+</html>
